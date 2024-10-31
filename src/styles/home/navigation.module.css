@@ -1,0 +1,59 @@
+.navigationContainer {
+  width: 100%;
+  background-color: #fff;
+}
+
+.navigationContent {
+  width: 65%;
+  height: 60px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  border-top: 3px dotted #c7c7c7;
+  border-bottom: 3px dotted #c7c7c7;
+}
+
+.linkContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+
+.linkContainer a {
+  color: #000;
+  font-family:  sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.actions .icon{
+	font-size: 1.2em;
+}
+
+.cartContainer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 35px;
+}
+
+.cartContainer .icon{
+	font-size: 1.2em;
+}
+
+.cartContainer p{
+	color: red;
+	font-weight: 100;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	margin-left: 4px;
+}
