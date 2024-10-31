@@ -1,0 +1,112 @@
+.topbarContainer {
+  height: 4.5vh;
+  width: 100%;
+  background-color: #000;
+}
+
+.topbarContent {
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.langContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #969696;
+}
+
+.langContainer h1 {
+  font-weight: 100;
+  font-size: 0.8em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.langContainer .icon {
+  margin-right: 4px;
+  font-size: 1.3em;
+}
+
+.langContainer .icon1 {
+  font-size: 1.3em;
+  margin-left: 4px;
+}
+
+.profileContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5%;
+  cursor: pointer;
+  color: #868686;
+  border-left: 1px solid #494949;
+  padding: 2px;
+}
+
+.profile:hover {
+  color: rgb(206, 87, 87);
+}
+
+.profile .icon {
+  font-size: 1.3em;
+  margin-right: 4px;
+}
+
+.profile h1 {
+  font-size: 0.8em;
+  font-weight: 100;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media (max-width: 600px) {
+  .topbarContainer {
+    height: auto;
+  }
+
+  .topbarContent {
+    width: 90%;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .langContainer .icon {
+    margin-right: 4px;
+    font-size: 1em;
+  }
+
+  .langContainer h1 {
+    font-weight: 100;
+    font-size: 0.7em;
+  }
+
+  .profileContainer {
+    justify-content: flex-start;
+  }
+
+  .profile {
+    margin-left: 0%;
+    padding: 3px;
+  }
+
+  .profile .icon {
+    font-size: 1em;
+    margin-right: 4px;
+  }
+
+  .profile h1 {
+    font-size: 0.7em;
+    font-weight: 100;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+}
