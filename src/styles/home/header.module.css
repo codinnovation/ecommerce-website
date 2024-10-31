@@ -21,6 +21,7 @@
 .storeName h1 {
   font-size: 2.6em;
   font-weight: 900;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .headerInfomation {
@@ -57,4 +58,65 @@
   font-weight: 100;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: #494949;
+}
+
+@media (max-width: 600px) {
+  .headerContainer {
+    height: auto;
+  }
+
+  .headerContent {
+    width: 90%;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .storeName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+  }
+
+  .storeName h1 {
+    font-size: 1.5em;
+    font-weight: 900;
+  }
+
+  .headerInfomation {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .info {
+    margin-left: 0%;
+  }
+
+  .info:nth-child(2) {
+    display: none;
+  }
+
+  .info .icon {
+    background-color: #eaeaea;
+    font-size: 2em;
+    padding: 4px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .info .name h1 {
+    text-transform: uppercase;
+    font-size: 0.65em;
+    font-weight: 100;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #494949;
+  }
+
+  .info .name p {
+    font-size: 0.6em;
+    font-weight: 100;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    color: #494949;
+  }
 }

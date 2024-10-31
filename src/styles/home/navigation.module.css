@@ -13,6 +13,10 @@
   border-bottom: 3px dotted #c7c7c7;
 }
 
+.menuContainer {
+  display: none;
+}
+
 .linkContainer {
   display: flex;
   justify-content: flex-start;
@@ -22,7 +26,7 @@
 
 .linkContainer a {
   color: #000;
-  font-family:  sans-serif;
+  font-family: sans-serif;
   font-weight: 600;
   text-decoration: none;
   text-transform: uppercase;
@@ -30,8 +34,8 @@
   width: 100%;
 }
 
-.activeLink{
-	color: red;
+.activeLink {
+  color: red;
 }
 
 .actions {
@@ -40,24 +44,63 @@
   align-items: center;
 }
 
-.actions .icon{
-	font-size: 1.2em;
+.actions .icon {
+  font-size: 1.2em;
 }
 
-.cartContainer{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-left: 35px;
+.cartContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 35px;
 }
 
-.cartContainer .icon{
-	font-size: 1.2em;
+.cartContainer .icon {
+  font-size: 1.2em;
 }
 
-.cartContainer p{
-	color: red;
-	font-weight: 100;
-	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-	margin-left: 4px;
+.cartContainer p {
+  color: red;
+  font-weight: 100;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-left: 4px;
+}
+
+@media (max-width: 600px) {
+  .navigationContent {
+    width: 90%;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 5%;
+  }
+
+  .linkContainer {
+    display: none;
+  }
+
+  .menuContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .menuContainer .icon {
+    font-size: 1.9em;
+  }
+
+  .actions .icon {
+    font-size: 1.5em;
+  }
+
+  .cartContainer {
+    margin-left: 20px;
+  }
+
+  .cartContainer .icon {
+    font-size: 1.5em;
+  }
+
+  .cartContainer p {
+    color: red;
+    margin-left: 2px;
+  }
 }

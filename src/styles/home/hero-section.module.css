@@ -47,13 +47,13 @@
   cursor: pointer;
 }
 
-.link:hover h1:nth-child(1){
-	border: 1px solid red;
-	color: red;
+.link:hover h1:nth-child(1) {
+  border: 1px solid red;
+  color: red;
 }
 
-.link:hover h1:nth-child(2){
-	color: red;
+.link:hover h1:nth-child(2) {
+  color: red;
 }
 
 .link h1:nth-child(1) {
@@ -155,7 +155,6 @@
   font-size: 0.8em;
   font-weight: 600;
   border-radius: 3px;
-
 }
 
 .showcaseGrid {
@@ -208,4 +207,55 @@
 .grid1 .image img {
   width: 100%;
   height: auto;
+}
+
+@media (max-width: 600px) {
+  .heroContent {
+    width: 90%;
+    grid-template-columns: 1fr;
+  }
+
+  .sideMenu {
+    display: none;
+  }
+
+  .showcase {
+    height: auto;
+    padding: 20px;
+    border-radius: 3px;
+  }
+
+  .discount {
+    margin-right: 30px;
+  }
+
+  .discount h1 {
+    height: 75px;
+    width: 75px;
+    padding: 30px;
+    font-size: 1.3em;
+  }
+
+  .showcaseDescription h1:nth-child(1) {
+	font-size: 1.5em;
+  }
+  
+  .showcaseDescription h1:nth-child(2) {
+	font-size: 1.8em;
+  }
+
+  .shopnow {
+	margin-top: 5%;
+  }
+  
+  .shopnow button {
+	width: 120px;
+	height: 40px;
+	font-size: 0.7em;
+	color: #000;
+  }
+  
+  .showcaseGrid{
+	display: none;
+  }
 }

@@ -66,3 +66,47 @@
   font-weight: 100;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+@media (max-width: 600px) {
+  .topbarContainer {
+    height: auto;
+  }
+
+  .topbarContent {
+    width: 90%;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .langContainer .icon {
+    margin-right: 4px;
+    font-size: 1em;
+  }
+
+  .langContainer h1 {
+    font-weight: 100;
+    font-size: 0.7em;
+  }
+
+  .profileContainer {
+    justify-content: flex-start;
+  }
+
+  .profile {
+    margin-left: 0%;
+    padding: 3px;
+  }
+
+  .profile .icon {
+    font-size: 1em;
+    margin-right: 4px;
+  }
+
+  .profile h1 {
+    font-size: 0.7em;
+    font-weight: 100;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+}

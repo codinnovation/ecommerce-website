@@ -1,0 +1,174 @@
+.categoryContainer {
+  width: 100%;
+  background-color: #fff;
+}
+
+.categoryContent {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+
+.categoryContent .header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.categoryContent .header .navigation {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.categoryContent .header .navigation .icon {
+  background-color: #f1f1f1;
+  margin-left: 20px;
+  width: 70px;
+  height: 30px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.categoryContent .header .navigation .icon:hover {
+  background-color: red;
+  color: #f1f1f1;
+}
+
+.categoryContent .header h1 {
+  text-transform: uppercase;
+  font-size: 1.3em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  margin-top: 2.5%;
+}
+
+.product {
+  width: 100%;
+}
+
+.productImage {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.productImage img {
+  width: 90%;
+  height: auto;
+}
+
+.productName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.productName h1 {
+  font-size: 0.85em;
+  font-weight: 100;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.productPrice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.productPrice h1 {
+  font-size: 1.2em;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.actions .icon:nth-child(2) {
+  color: red;
+  font-size: 2em;
+  background-color: #f1f1f1;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.actions .icon:nth-child(1) {
+  color: violet;
+  font-size: 2em;
+  background-color: #f1f1f1;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+@media (max-width: 600px) {
+  .categoryContent {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 15%;
+  }
+
+  .categoryContent .header h1 {
+    font-size: 0.8em;
+  }
+
+  .categoryContent .header .navigation .icon {
+    margin-left: 10px;
+    width: auto;
+    height: 30px;
+    padding: 4px;
+  }
+
+  .productGrid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+	margin-top: 3%;
+  }
+  
+  .productImage img {
+    width: 90%;
+    height: auto;
+  }
+
+  .productName {
+    margin-top: 6%;
+  }
+
+  .productName h1 {
+    font-size: 0.8em;
+  }
+
+  .productPrice {
+    margin-top: 1%;
+  }
+
+  .productPrice h1 {
+    font-size: 1em;
+  }
+
+  .actions {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    margin-top: 5%;
+  }
+
+  .actions .icon:nth-child(2) {
+    color: red;
+    font-size: 1.6em;
+    padding: 5px;
+  }
+
+  .actions .icon:nth-child(1) {
+    color: violet;
+    font-size: 1.6em;
+    padding: 5px;
+  }
+}
