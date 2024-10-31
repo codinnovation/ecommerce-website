@@ -5,6 +5,7 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import PersonIcon from "@mui/icons-material/Person";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import KeyIcon from "@mui/icons-material/Key";
+import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
 
 function Topbar() {
   return (
@@ -26,6 +27,11 @@ function Topbar() {
             <div className={styles.profile}>
               <FavoriteBorderIcon className={styles.icon} />
               <h1>My Whishlist</h1>
+            </div>
+
+            <div className={styles.profile}>
+              <ShoppingCartCheckoutIcon className={styles.icon} />
+              <h1>Checkout</h1>
             </div>
 
             <div className={styles.profile}>
