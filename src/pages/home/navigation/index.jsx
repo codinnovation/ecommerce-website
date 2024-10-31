@@ -3,8 +3,15 @@ import styles from "../../../styles/home/navigation.module.css";
 import Link from "next/link";
 import SearchIcon from "@mui/icons-material/Search";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import { useRouter } from "next/router";
 
 function Navigation() {
+  const router = useRouter();
+
+  const getActiveClass = (path) => {
+    return router.pathname === path ? styles.activeLink : "";
+  };
+
   return (
     <>
       <div className={styles.navigationContainer}>

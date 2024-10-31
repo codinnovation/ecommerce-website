@@ -1,0 +1,211 @@
+.heroContainer {
+  width: 100%;
+}
+
+.heroContent {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 45px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 25px;
+}
+
+.sideMenu {
+  border: 1px solid #cccc;
+  height: 65vh;
+  padding: 15px;
+  border-radius: 3px;
+}
+
+.sideMenu .header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.sideMenu .header h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.4em;
+  text-transform: uppercase;
+}
+
+.sideMenu hr {
+  margin-top: 20px;
+  border-radius: 0.1px solid #fcfcfc;
+}
+
+.menuLinks {
+  margin-top: 10px;
+}
+
+.link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 35px;
+  cursor: pointer;
+}
+
+.link:hover h1:nth-child(1){
+	border: 1px solid red;
+	color: red;
+}
+
+.link:hover h1:nth-child(2){
+	color: red;
+}
+
+.link h1:nth-child(1) {
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  font-weight: 100;
+  border-radius: 50%;
+}
+
+.link h1:nth-child(2) {
+  font-size: 1em;
+  font-weight: 100;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #000;
+}
+
+.showcase {
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 65vh;
+  padding: 20px;
+  border-radius: 3px;
+}
+
+.discount {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin-right: 60px;
+}
+
+.discount h1 {
+  background-color: #f3bb26;
+  color: #f1f1f1;
+  height: 85px;
+  width: 85px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.showcase .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.showcase .image img {
+  width: 100%;
+  height: auto;
+}
+
+.showcaseDescription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.showcaseDescription h1:nth-child(1) {
+  color: red;
+  font-weight: 100;
+  font-size: 2.3em;
+  text-transform: uppercase;
+}
+
+.showcaseDescription h1:nth-child(2) {
+  color: #000;
+  font-weight: 600;
+  font-size: 3em;
+  text-transform: uppercase;
+}
+
+.shopnow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.shopnow button {
+  background-color: #fff;
+  border: none;
+  width: 120px;
+  height: 40px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: 600;
+  border-radius: 3px;
+
+}
+
+.showcaseGrid {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  height: 65vh;
+  gap: 35px;
+}
+
+.grid1 {
+  background-color: #f1f1f1;
+  height: 100%;
+  border-radius: 3px;
+}
+
+.grid2 {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+}
+
+.grid2 .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.grid2 .image img {
+  width: 100%;
+  height: auto;
+}
+
+.grid1 .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid1 .header h1 {
+  font-size: 1em;
+  text-transform: uppercase;
+}
+.grid1 .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.grid1 .image img {
+  width: 100%;
+  height: auto;
+}
