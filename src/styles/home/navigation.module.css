@@ -87,6 +87,13 @@
     font-size: 1.9em;
   }
 
+  .menuContainer h1 {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+  }
+
   .actions .icon {
     font-size: 1.5em;
   }
@@ -102,5 +109,55 @@
   .cartContainer p {
     color: red;
     margin-left: 2px;
+  }
+
+  .menu {
+    position: fixed;
+    height: 100vh;
+    width: 70%;
+    top: 0;
+    left: 0;
+    z-index: 900;
+    background-color: #000;
+    box-shadow: 0px 0px 0px 100000px rgba(0, 0, 0, 0.6);
+    padding: 20px;
+  }
+
+  .closeIcon {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .closeIcon .icon {
+    color: #f1f1f1;
+    background-color: #282727;
+    font-size: 2em;
+    border-radius: 50%;
+    padding: 4px;
+  }
+
+  .link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .link h1:nth-child(1) {
+    color: #767676;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	font-size: 1em;
+  }
+
+  .link h1:nth-child(2) {
+    color: #767676;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	font-size: 1em;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	margin-left: 5px;
   }
 }
