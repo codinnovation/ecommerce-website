@@ -1,0 +1,68 @@
+.topbarContainer {
+  height: 4.5vh;
+  width: 100%;
+  background-color: #000;
+}
+
+.topbarContent {
+  width: 65%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.langContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #969696;
+}
+
+.langContainer h1 {
+  font-weight: 100;
+  font-size: 1em;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.langContainer .icon {
+  margin-right: 4px;
+  font-size: 1.3em;
+}
+
+.langContainer .icon1 {
+  font-size: 1.3em;
+  margin-left: 4px;
+}
+
+.profileContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5%;
+  cursor: pointer;
+  color: #969696;
+  border-left: 1px solid #494949;
+  padding: 2px;
+}
+
+.profile:hover {
+  color: rgb(206, 87, 87);
+}
+
+.profile .icon {
+  font-size: 1.3em;
+  margin-right: 4px;
+}
+
+.profile h1 {
+  font-size: 1em;
+  font-weight: 100;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
