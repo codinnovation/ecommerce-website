@@ -6,9 +6,9 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { useRouter } from "next/router";
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Toaster, toast } from 'react-hot-toast';
-
-
+import { Toaster, toast } from "react-hot-toast";
+import Photo2 from "../../../../public/shirt.png";
+import Image from "next/image";
 
 function Navigation() {
   const router = useRouter();
@@ -65,11 +65,69 @@ function Navigation() {
             <div className={styles.cartContainer}>
               <AddShoppingCartIcon className={styles.icon} />
               <p>3 items</p>
+
+              {/* Cart content under the cart icon */}
+              <div className={styles.cartContent}>
+                <div className={styles.cartItem}>
+                  <div className={styles.cartItemContent}>
+                    <div className={styles.cartItemPhoto}>
+                      <Image src={Photo2} width={900} height={900} alt="" />
+                    </div>
+
+                    <div className={styles.cartItemName}>
+                      <h1>This is Item Name</h1>
+                      <p>Ghc50.00</p>
+                    </div>
+                  </div>
+
+                  <div className={styles.cartItemButton}>
+                    <button>Buy</button>
+                    <button>Delete</button>
+                  </div>
+                </div>
+
+                <div className={styles.cartItem}>
+                  <div className={styles.cartItemContent}>
+                    <div className={styles.cartItemPhoto}>
+                      <Image src={Photo2} width={900} height={900} alt="" />
+                    </div>
+
+                    <div className={styles.cartItemName}>
+                      <h1>This is Item Name</h1>
+                      <p>Ghc50.00</p>
+                    </div>
+                  </div>
+
+                  <div className={styles.cartItemButton}>
+                    <button>Buy</button>
+                    <button>Delete</button>
+                  </div>
+                </div>
+
+                <div className={styles.cartItem}>
+                  <div className={styles.cartItemContent}>
+                    <div className={styles.cartItemPhoto}>
+                      <Image src={Photo2} width={900} height={900} alt="" />
+                    </div>
+
+                    <div className={styles.cartItemName}>
+                      <h1>This is Item Name</h1>
+                      <p>Ghc50.00</p>
+                    </div>
+                  </div>
+
+                  <div className={styles.cartItemButton}>
+                    <button>Buy</button>
+                    <button>Delete</button>
+                  </div>
+                </div>
+                
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <Toaster/>
+      <Toaster />
 
       {openMenu && (
         <>
