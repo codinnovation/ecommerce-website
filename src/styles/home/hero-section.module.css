@@ -93,6 +93,17 @@
   align-items: center;
   width: 100%;
   margin-right: 60px;
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 .discount h1 {
@@ -113,9 +124,20 @@
   align-items: center;
 }
 
+@keyframes scaleImage {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
 .showcase .image img {
   width: 100%;
   height: auto;
+  animation: scaleImage 3s ease-in-out infinite;
 }
 
 .showcaseDescription {
@@ -137,6 +159,27 @@
   font-weight: 600;
   font-size: 3em;
   text-transform: uppercase;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid;
+  width: 0;
+  animation: typing 4s steps(30, end) forwards,
+    blinkCaret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blinkCaret {
+  50% {
+    border-color: transparent;
+  }
 }
 
 .shopnow {
@@ -185,6 +228,8 @@
 .grid2 .image img {
   width: 100%;
   height: auto;
+  animation: scaleImage 7s ease-in-out infinite;
+  padding: 20px;
 }
 
 .grid1 .header {
@@ -207,6 +252,8 @@
 .grid1 .image img {
   width: 100%;
   height: auto;
+  animation: scaleImage 7s ease-in-out infinite;
+  padding: 20px;
 }
 
 @media (max-width: 600px) {
@@ -237,25 +284,25 @@
   }
 
   .showcaseDescription h1:nth-child(1) {
-	font-size: 1.5em;
+    font-size: 1.5em;
   }
-  
+
   .showcaseDescription h1:nth-child(2) {
-	font-size: 1.8em;
+    font-size: 1.8em;
   }
 
   .shopnow {
-	margin-top: 5%;
+    margin-top: 5%;
   }
-  
+
   .shopnow button {
-	width: 120px;
-	height: 40px;
-	font-size: 0.7em;
-	color: #000;
+    width: 120px;
+    height: 40px;
+    font-size: 0.7em;
+    color: #000;
   }
-  
-  .showcaseGrid{
-	display: none;
+
+  .showcaseGrid {
+    display: none;
   }
 }
