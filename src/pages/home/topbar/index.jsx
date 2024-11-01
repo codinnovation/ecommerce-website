@@ -6,6 +6,9 @@ import PersonIcon from "@mui/icons-material/Person";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import KeyIcon from "@mui/icons-material/Key";
 import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
+import { Toaster, toast } from "react-hot-toast";
+import Photo2 from "../../../../public/shirt.png";
+import Image from "next/image";
 
 function Topbar() {
   return (
@@ -27,6 +30,7 @@ function Topbar() {
             <div className={styles.profile}>
               <FavoriteBorderIcon className={styles.icon} />
               <h1>My Whishlist</h1>
+              
             </div>
 
             <div className={styles.profile}>

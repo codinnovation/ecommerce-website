@@ -7,12 +7,15 @@ import { useRouter } from "next/router";
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Toaster, toast } from "react-hot-toast";
+import Photo from "../../../../public/cybertruck.png";
+import Photo1 from "../../../../public/sneaker.png";
 import Photo2 from "../../../../public/shirt.png";
 import Image from "next/image";
 
 function Navigation() {
   const router = useRouter();
   const [openMenu, setOpenMenu] = useState(false);
+  const [buyModal, setBuyModal] = useState(false);
 
   const getActiveClass = (path) => {
     return router.pathname === path ? styles.activeLink : "";
@@ -81,7 +84,7 @@ function Navigation() {
                   </div>
 
                   <div className={styles.cartItemButton}>
-                    <button>Buy</button>
+                    <button onClick={() => setBuyModal(true)}>Buy</button>
                     <button>Delete</button>
                   </div>
                 </div>
@@ -99,7 +102,25 @@ function Navigation() {
                   </div>
 
                   <div className={styles.cartItemButton}>
-                    <button>Buy</button>
+                    <button onClick={() => setBuyModal(true)}>Buy</button>
+                    <button>Delete</button>
+                  </div>
+                </div>
+
+                <div className={styles.cartItem}>
+                  <div className={styles.cartItemContent}>
+                    <div className={styles.cartItemPhoto}>
+                      <Image src={Photo} width={900} height={900} alt="" />
+                    </div>
+
+                    <div className={styles.cartItemName}>
+                      <h1>This is Item Name</h1>
+                      <p>Ghc50.00</p>
+                    </div>
+                  </div>
+
+                  <div className={styles.cartItemButton}>
+                    <button onClick={() => setBuyModal(true)}>Buy</button>
                     <button>Delete</button>
                   </div>
                 </div>
@@ -117,11 +138,46 @@ function Navigation() {
                   </div>
 
                   <div className={styles.cartItemButton}>
-                    <button>Buy</button>
+                    <button onClick={() => setBuyModal(true)}>Buy</button>
                     <button>Delete</button>
                   </div>
                 </div>
-                
+
+                <div className={styles.cartItem}>
+                  <div className={styles.cartItemContent}>
+                    <div className={styles.cartItemPhoto}>
+                      <Image src={Photo1} width={900} height={900} alt="" />
+                    </div>
+
+                    <div className={styles.cartItemName}>
+                      <h1>This is Item Name</h1>
+                      <p>Ghc50.00</p>
+                    </div>
+                  </div>
+
+                  <div className={styles.cartItemButton}>
+                    <button onClick={() => setBuyModal(true)}>Buy</button>
+                    <button>Delete</button>
+                  </div>
+                </div>
+
+                <div className={styles.cartItem}>
+                  <div className={styles.cartItemContent}>
+                    <div className={styles.cartItemPhoto}>
+                      <Image src={Photo1} width={900} height={900} alt="" />
+                    </div>
+
+                    <div className={styles.cartItemName}>
+                      <h1>This is Item Name</h1>
+                      <p>Ghc50.00</p>
+                    </div>
+                  </div>
+
+                  <div className={styles.cartItemButton}>
+                    <button onClick={() => setBuyModal(true)}>Buy</button>
+                    <button>Delete</button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -144,6 +200,12 @@ function Navigation() {
               <h1>Living Room Furniture</h1>
             </div>
           </div>
+        </>
+      )}
+
+      {buyModal && (
+        <>
+          <div className={styles.buyContainer}></div>
         </>
       )}
     </>
