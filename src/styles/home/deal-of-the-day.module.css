@@ -34,6 +34,11 @@
   padding: 10px;
 }
 
+.productImage:hover{
+  animation: scaleImage 1s ease-in-out infinite;
+}
+
+
 .productImage img {
   width: 90%;
   height: auto;
@@ -83,6 +88,16 @@
   background-color: #f1f1f1;
   border-radius: 50%;
   padding: 5px;
+}
+
+@keyframes scaleImage {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
 }
 
 @media (max-width: 600px) {

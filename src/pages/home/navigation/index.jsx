@@ -6,6 +6,9 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { useRouter } from "next/router";
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Toaster, toast } from 'react-hot-toast';
+
+
 
 function Navigation() {
   const router = useRouter();
@@ -27,15 +30,33 @@ function Navigation() {
             <h1>Categories</h1>
           </div>
           <div className={styles.linkContainer}>
-            <Link href="/">Home</Link>
-            <Link href="/">funiture</Link>
-            <Link href="/">shop</Link>
-            <Link href="/">mobile</Link>
-            <Link href="/">offer</Link>
-            <Link href="/">deal</Link>
-            <Link href="/">blog</Link>
-            <Link href="/">contact</Link>
-            <Link href="/">menu</Link>
+            <Link href="/" className={getActiveClass("/")}>
+              Home
+            </Link>
+            <Link href="/furniture" className={getActiveClass("/furniture")}>
+              Furniture
+            </Link>
+            <Link href="/shop" className={getActiveClass("/shop")}>
+              Shop
+            </Link>
+            <Link href="/mobile" className={getActiveClass("/mobile")}>
+              Mobile
+            </Link>
+            <Link href="/offer" className={getActiveClass("/offer")}>
+              Offer
+            </Link>
+            <Link href="/deal" className={getActiveClass("/deal")}>
+              Deal
+            </Link>
+            <Link href="/blog" className={getActiveClass("/blog")}>
+              Blog
+            </Link>
+            <Link href="/contact" className={getActiveClass("/contact")}>
+              Contact
+            </Link>
+            <Link href="/menu" className={getActiveClass("/menu")}>
+              Menu
+            </Link>
           </div>
 
           <div className={styles.actions}>
@@ -48,6 +69,7 @@ function Navigation() {
           </div>
         </div>
       </div>
+      <Toaster/>
 
       {openMenu && (
         <>
