@@ -36,9 +36,11 @@ function Navigation() {
             <Link href="/" className={getActiveClass("/")}>
               Home
             </Link>
-            <Link href="/furniture" className={getActiveClass("/furniture")}>
-              Fashion
+
+            <Link href="/my-product" className={getActiveClass("/shop")}>
+              Add Product
             </Link>
+
             <Link href="/shop" className={getActiveClass("/shop")}>
               Electronics
             </Link>
