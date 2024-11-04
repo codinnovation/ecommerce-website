@@ -19,9 +19,10 @@
 }
 
 .storeName h1 {
-  font-size: 2.6em;
+  font-size: 1.5em;
   font-weight: 900;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: uppercase;
 }
 
 .headerInfomation {
@@ -75,13 +76,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
     margin-top: 5%;
   }
 
   .storeName h1 {
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: 900;
+    margin-right: 4px;
   }
+
 
   .headerInfomation {
     justify-content: center;

@@ -1,9 +1,6 @@
 .navigationContainer {
   width: 100%;
   background-color: #fff;
-  position: sticky;
-  top: 0;
-  z-index: 900;
   padding-top: 5px;
 }
 
@@ -36,6 +33,10 @@
   text-transform: uppercase;
   font-size: 0.9em;
   width: 100%;
+}
+
+.linkContainer a:hover{
+  color: red;
 }
 
 .activeLink {

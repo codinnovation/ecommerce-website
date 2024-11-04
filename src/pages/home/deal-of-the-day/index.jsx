@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouter } from "next/router";
 import styles from "../../../styles/home/deal-of-the-day.module.css";
 import Photo2 from "../../../../public/shirt.png";
 import Image from "next/image";
@@ -7,6 +8,7 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { Toaster, toast } from "react-hot-toast";
 
 function DealOfTheDay() {
+  const router = useRouter();
   function AddCart() {
     toast.success("Item added successfully");
   }
@@ -19,7 +21,10 @@ function DealOfTheDay() {
           </div>
 
           <div className={styles.product}>
-            <div className={styles.productImage}>
+            <div
+              className={styles.productImage}
+              onClick={() => router.push("/product-detail")}
+            >
               <Image src={Photo2} width={900} height={900} alt="" />
             </div>
 
@@ -51,8 +56,8 @@ function DealOfTheDay() {
             </div>
 
             <div className={styles.actions}>
-            <AddShoppingCartIcon className={styles.icon} onClick={AddCart} />
-            <FavoriteBorderIcon className={styles.icon} />
+              <AddShoppingCartIcon className={styles.icon} onClick={AddCart} />
+              <FavoriteBorderIcon className={styles.icon} />
             </div>
           </div>
 
