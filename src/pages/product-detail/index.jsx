@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouter } from "next/router";
 import Head from "next/head";
 import Layout from "../layout";
 import styles from "../../styles/product-detailed.module.css";
@@ -10,6 +11,10 @@ import PaymentIcon from "@mui/icons-material/Payment";
 import { Toaster, toast } from "react-hot-toast";
 
 function ProductDetail() {
+  const router = useRouter();
+  const { productName, productPrice, productImage, productDescription } =
+    router.query;
+
   function AddCart() {
     toast.success("Item added successfully");
   }
@@ -25,22 +30,28 @@ function ProductDetail() {
       <div className={styles.productContainer}>
         <div className={styles.productContent}>
           <div className={styles.header}>
-            <p>Product Name</p>
+            <p>{productName}</p>
           </div>
 
           <div className={styles.productGrid}>
             <div className={styles.productImage}>
-              <Image src={CyberTruck} width={900} height={900} alt="" />
+              <Image
+                src={productImage}
+                width={900}
+                height={900}
+                alt={productName || ""}
+                unoptimized
+              />{" "}
             </div>
 
             <div className={styles.description}>
               <div className={styles.header}>
-                <h1>Modular Modern</h1>
+                <h1>{productName}</h1>
               </div>
 
               <div className={styles.price}>
                 <p>Ghc</p>
-                <p>505.90</p>
+                <p>{productPrice}</p>
               </div>
 
               <div className={styles.availability}>
@@ -52,13 +63,7 @@ function ProductDetail() {
               <div className={styles.overview}>
                 <h1>Description</h1>
 
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Quisque vel magna quis risus commodo porttitor. Praesent
-                  rutrum lectus diam, ac consequat dolor hendrerit sit amet.
-                  Nulla tincidunt tempor nulla et fermentum. Maecenas tempor
-                  massa sed sodales dignissim
-                </p>
+                <p>{productDescription}</p>
               </div>
 
               <div className={styles.actionBtn}>
