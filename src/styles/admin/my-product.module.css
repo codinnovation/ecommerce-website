@@ -1,0 +1,113 @@
+.myproductContainer {
+  width: 100%;
+  background-color: #fff;
+}
+
+.myproductContent {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 2%;
+}
+
+.myproductContent .header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.myproductContent .header h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1em;
+  font-weight: 100;
+}
+
+.addContainer {
+  background-color: #f1f1f1f1;
+  height: 60vh;
+  margin-top: 2%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.addGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 2%;
+  gap: 8%;
+}
+
+.addGrid .field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5%;
+}
+
+.addGrid .field label {
+  font-size: 1em;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-bottom: 10px;
+}
+
+.addGrid .field input,
+.addGrid .field textarea,
+.addGrid .field select {
+  height: 80px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding-left: 15px;
+  font-size: 1em;
+}
+
+.addGrid .field input:focus {
+  outline: none;
+}
+
+.addBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7%;
+}
+
+.addBtn button {
+  height: 50px;
+  width: 150px;
+  border: none;
+  background-color: green;
+  color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media (max-width: 600px) {
+  .myproductContent {
+    width: 90%;
+    margin-top: 5%;
+  }
+
+  .myproductContent .header h1 {
+    font-size: 1.1em;
+  }
+
+  .addContainer {
+    height: auto;
+  }
+
+  .addGrid {
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin-top: 2%;
+    gap: 5%;
+  }
+
+  .addGrid .field input,
+  .addGrid .field textarea {
+    height: 50px;
+  }
+
+  .addBtn {
+    margin-top: 25%;
+  }
+}

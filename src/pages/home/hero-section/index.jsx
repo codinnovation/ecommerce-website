@@ -1,14 +1,14 @@
 import React from "react";
+import { useRouter } from "next/router";
 import styles from "../../../styles/home/hero-section.module.css";
-import Photo from "../../../../public/cybertruck.png";
-import Photo1 from "../../../../public/sneaker.png";
-import Photo2 from "../../../../public/shirt.png";
 import Photo3 from "../../../../public/blender.png";
 import Photo4 from "../../../../public/headphone.png";
 import Photo5 from "../../../../public/laptop.png";
 import Image from "next/image";
 
 function HeroSection() {
+  const router = useRouter();
+
   return (
     <>
       <div className={styles.heroContainer}>
@@ -40,7 +40,15 @@ function HeroSection() {
                 <h1>Sneakers</h1>
               </div>
 
-              <div className={styles.link}>
+              <div
+                className={styles.link}
+                onClick={() =>
+                  router.push({
+                    pathname: "/list",
+                    query: { category: "electronics", title: "Electronics" }
+                  })
+                }
+              >
                 <h1>5</h1>
                 <h1>Electronics</h1>
               </div>
