@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "../../../styles/home/header.module.css";
 import DeliveryDiningIcon from "@mui/icons-material/DeliveryDining";
-import CallIcon from '@mui/icons-material/Call';
-import PriceChangeIcon from '@mui/icons-material/PriceChange';
+import CallIcon from "@mui/icons-material/Call";
+import PriceChangeIcon from "@mui/icons-material/PriceChange";
 
 function Header() {
   return (
@@ -10,8 +10,7 @@ function Header() {
       <div className={styles.headerContainer}>
         <div className={styles.headerContent}>
           <div className={styles.storeName}>
-            <h1>Darlington&apos;s </h1>
-            <h1>Mall</h1>
+            <h1>DarL. Mall</h1>
           </div>
 
           <div className={styles.headerInfomation}>
