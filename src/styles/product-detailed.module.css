@@ -1,0 +1,229 @@
+.productContainer {
+  width: 100%;
+  background-color: #fff;
+}
+
+.productContent {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 2%;
+}
+
+.productContent .header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.productContent .header p {
+  font-size: 1em;
+  font-weight: 100;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  margin-top: 2%;
+  gap: 4%;
+}
+
+.productImage {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid #f1f1f1f1;
+  height: 55vh;
+}
+
+.productImage img {
+  width: 100%;
+  height: auto;
+}
+
+.description .header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.description .header h1 {
+  font-size: 1.2em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
+}
+
+.description .price {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.description .price p:nth-child(1) {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.9em;
+  font-weight: 500;
+  margin-right: 3px;
+}
+
+.description .price p:nth-child(2) {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.description .availability {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.description .availability p {
+  font-size: 0.9em;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 100;
+  color: #707070;
+}
+
+.description hr {
+  margin-top: 5%;
+  border: 1px solid #f1f1f1;
+}
+
+.overview {
+  margin-top: 20px;
+}
+
+.overview h1 {
+  font-size: 1em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+}
+
+.overview p {
+  font-size: 0.9em;
+  margin-top: 10px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 100;
+  color: #707070;
+}
+
+.actionBtn {
+  margin-top: 10%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.actionBtn .icon {
+  margin-right: 20px;
+  border: 1px solid #707070;
+  font-size: 2.6em;
+  padding: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.actionBtn .icon:nth-child(1) {
+  color: red;
+}
+
+.actionBtn .icon:nth-child(2) {
+  color: violet;
+}
+
+.actionBtn .icon:nth-child(3) {
+  color: green;
+}
+
+.review {
+  margin-top: 5%;
+}
+
+.review .header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.review .header h1 {
+  font-size: 1.2em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
+}
+
+@media (max-width: 600px) {
+  .productContent {
+    width: 90%;
+    margin-top: 15%;
+  }
+
+  .productContent .header p {
+    font-size: 1.1em;
+  }
+
+  .productGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 2%;
+    gap: 4%;
+  }
+
+  .productImage {
+    height: 100%;
+  }
+
+  .description .header h1 {
+    font-size: 1.1em;
+  }
+
+  .description .price p:nth-child(1) {
+    font-size: 0.8em;
+  }
+
+  .description .price p:nth-child(2) {
+    font-size: 1em;
+  }
+
+  .description .availability {
+    margin-top: 15px;
+  }
+
+  .description .availability p {
+    font-size: 0.85em;
+  }
+
+  .overview {
+    margin-top: 30px;
+  }
+
+  .overview h1 {
+    font-size: 1.1em;
+  }
+
+  .overview p {
+    font-size: 0.85em;
+    margin-top: 10px;
+  }
+
+  .actionBtn {
+    margin-top: 15%;
+  }
+
+  .actionBtn .icon {
+    margin-right: 30px;
+    font-size: 2.1em;
+    padding: 6px;
+  }
+
+  .review {
+	margin-top: 10%;
+  }
+  
+  .review .header h1 {
+	font-size: 1.1em;
+  }
+  
+}

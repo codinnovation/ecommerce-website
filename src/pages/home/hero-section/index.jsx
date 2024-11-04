@@ -19,37 +19,42 @@ function HeroSection() {
             <div className={styles.menuLinks}>
               <div className={styles.link}>
                 <h1>1</h1>
-                <h1>Sofas & Counches</h1>
+                <h1>Fashion</h1>
               </div>
 
               <div className={styles.link}>
                 <h1>2</h1>
-                <h1>Living Room Furniture</h1>
+                <h1>Home Appliances</h1>
               </div>
 
               <div className={styles.link}>
                 <h1>3</h1>
-                <h1>Television Stands</h1>
+                <h1>Shoes</h1>
               </div>
 
               <div className={styles.link}>
                 <h1>4</h1>
-                <h1>Bedroom Furniture</h1>
+                <h1>Sneakers</h1>
               </div>
 
               <div className={styles.link}>
                 <h1>5</h1>
-                <h1>Coffee Tables</h1>
+                <h1>Electronics</h1>
               </div>
 
               <div className={styles.link}>
                 <h1>6</h1>
-                <h1>Media Storage</h1>
+                <h1>Laptops</h1>
               </div>
 
               <div className={styles.link}>
                 <h1>7</h1>
-                <h1>Chests of Drawers</h1>
+                <h1>Apple Phones</h1>
+              </div>
+
+              <div className={styles.link}>
+                <h1>8</h1>
+                <h1>Android Phones</h1>
               </div>
             </div>
           </div>
