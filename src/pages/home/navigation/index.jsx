@@ -191,9 +191,17 @@ function Navigation() {
               <CloseIcon className={styles.icon} />
             </div>
 
-            <div className={styles.link}>
+            <div
+              className={styles.link}
+              onClick={() =>
+                router.push({
+                  pathname: "/list",
+                  query: { category: "electronics", title: "Electronics" }
+                })
+              }
+            >
               <h1>1</h1>
-              <h1>Living Room Furniture</h1>
+              <h1>Electronics</h1>
             </div>
           </div>
         </>
