@@ -32,10 +32,12 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
+  cursor: pointer;
 }
 
 .productImage:hover{
   animation: scaleImage 1s ease-in-out infinite;
+  background-color: #f1f1f1;
 }
 
 

@@ -37,28 +37,22 @@ function Navigation() {
               Home
             </Link>
             <Link href="/furniture" className={getActiveClass("/furniture")}>
-              Furniture
+              Fashion
             </Link>
             <Link href="/shop" className={getActiveClass("/shop")}>
-              Shop
+              Electronics
             </Link>
             <Link href="/mobile" className={getActiveClass("/mobile")}>
-              Mobile
+              Android
             </Link>
             <Link href="/offer" className={getActiveClass("/offer")}>
-              Offer
+              Apple
             </Link>
             <Link href="/deal" className={getActiveClass("/deal")}>
-              Deal
-            </Link>
-            <Link href="/blog" className={getActiveClass("/blog")}>
-              Blog
+              Sneakers
             </Link>
             <Link href="/contact" className={getActiveClass("/contact")}>
               Contact
-            </Link>
-            <Link href="/menu" className={getActiveClass("/menu")}>
-              Menu
             </Link>
           </div>
 

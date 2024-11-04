@@ -3,6 +3,9 @@ import styles from "../../../styles/home/hero-section.module.css";
 import Photo from "../../../../public/cybertruck.png";
 import Photo1 from "../../../../public/sneaker.png";
 import Photo2 from "../../../../public/shirt.png";
+import Photo3 from "../../../../public/blender.png";
+import Photo4 from "../../../../public/headphone.png";
+import Photo5 from "../../../../public/laptop.png";
 import Image from "next/image";
 
 function HeroSection() {
@@ -19,37 +22,42 @@ function HeroSection() {
             <div className={styles.menuLinks}>
               <div className={styles.link}>
                 <h1>1</h1>
-                <h1>Sofas & Counches</h1>
+                <h1>Fashion</h1>
               </div>
 
               <div className={styles.link}>
                 <h1>2</h1>
-                <h1>Living Room Furniture</h1>
+                <h1>Home Appliances</h1>
               </div>
 
               <div className={styles.link}>
                 <h1>3</h1>
-                <h1>Television Stands</h1>
+                <h1>Shoes</h1>
               </div>
 
               <div className={styles.link}>
                 <h1>4</h1>
-                <h1>Bedroom Furniture</h1>
+                <h1>Sneakers</h1>
               </div>
 
               <div className={styles.link}>
                 <h1>5</h1>
-                <h1>Coffee Tables</h1>
+                <h1>Electronics</h1>
               </div>
 
               <div className={styles.link}>
                 <h1>6</h1>
-                <h1>Media Storage</h1>
+                <h1>Laptops</h1>
               </div>
 
               <div className={styles.link}>
                 <h1>7</h1>
-                <h1>Chests of Drawers</h1>
+                <h1>Apple Phones</h1>
+              </div>
+
+              <div className={styles.link}>
+                <h1>8</h1>
+                <h1>Android Phones</h1>
               </div>
             </div>
           </div>
@@ -58,12 +66,12 @@ function HeroSection() {
               <h1>-30%</h1>
             </div>
             <div className={styles.image}>
-              <Image src={Photo} width={900} height={900} alt="" />
+              <Image src={Photo5} width={900} height={900} alt="" />
             </div>
 
             <div className={styles.showcaseDescription}>
-              <h1>Furniture</h1>
-              <h1>Wood Style</h1>
+              <h1>Shop With</h1>
+              <h1>darlington</h1>
             </div>
 
             <div className={styles.shopnow}>
@@ -74,12 +82,12 @@ function HeroSection() {
           <div className={styles.showcaseGrid}>
             <div className={styles.grid1}>
               <div className={styles.image}>
-                <Image src={Photo1} width={900} height={900} alt="" />
+                <Image src={Photo3} width={900} height={900} alt="" />
               </div>
             </div>
             <div className={styles.grid2}>
               <div className={styles.image}>
-                <Image src={Photo2} width={900} height={900} alt="" />
+                <Image src={Photo4} width={900} height={900} alt="" />
               </div>
             </div>
           </div>
