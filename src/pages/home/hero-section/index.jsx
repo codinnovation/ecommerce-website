@@ -20,7 +20,15 @@ function HeroSection() {
             <hr />
 
             <div className={styles.menuLinks}>
-              <div className={styles.link}>
+              <div
+                className={styles.link}
+                onClick={() =>
+                  router.push({
+                    pathname: "/list",
+                    query: { category: "fashion", title: "Fashion" }
+                  })
+                }
+              >
                 <h1>1</h1>
                 <h1>Fashion</h1>
               </div>
@@ -35,7 +43,15 @@ function HeroSection() {
                 <h1>Shoes</h1>
               </div>
 
-              <div className={styles.link}>
+              <div
+                className={styles.link}
+                onClick={() =>
+                  router.push({
+                    pathname: "/list",
+                    query: { category: "sneakers", title: "Sneakers" }
+                  })
+                }
+              >
                 <h1>4</h1>
                 <h1>Sneakers</h1>
               </div>
