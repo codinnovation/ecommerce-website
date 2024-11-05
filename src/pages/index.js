@@ -1,10 +1,12 @@
 import Head from "next/head";
-import Image from "next/image";
+import { useRouter } from "next/router";
 import styles from "@/styles/Home.module.css";
 import HomePage from "./home";
 import withSession from "./api/session";
+import AddCircleIcon from '@mui/icons-material/AddCircle';
 
 export default function Home({ user }) {
+  const router = useRouter()
   return (
     <>
       <Head>
@@ -13,9 +15,12 @@ export default function Home({ user }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <HomePage user={user} />
 
-      <div>
-        <HomePage user={user} />
+      <div className={styles.container}>
+        <div className={styles.addContainer}>
+          <AddCircleIcon className={styles.icon} onClick={() => router.push("/my-product")}/>
+        </div>
       </div>
     </>
   );
@@ -32,7 +37,7 @@ export const getServerSideProps = withSession(async function ({ req, res }) {
 
   return {
     props: {
-      user: user,
+      user: user ? user : null,
     },
   };
 });

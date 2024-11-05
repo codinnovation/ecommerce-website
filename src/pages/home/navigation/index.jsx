@@ -195,13 +195,120 @@ function Navigation() {
               className={styles.link}
               onClick={() =>
                 router.push({
+                  pathname: "/",
+                })
+              }
+            >
+              <h1>0</h1>
+              <h1>Home</h1>
+            </div>
+
+
+            <div
+              className={styles.link}
+              onClick={() =>
+                router.push({
+                  pathname: "/list",
+                  query: { category: "Fashion", title: "Fashion" }
+                })
+              }
+            >
+              <h1>1</h1>
+              <h1>Fashion</h1>
+            </div>
+
+            <div
+              className={styles.link}
+              onClick={() =>
+                router.push({
+                  pathname: "/list",
+                  query: {
+                    category: "HomeAppliances",
+                    title: "Home Appliances"
+                  }
+                })
+              }
+            >
+              <h1>2</h1>
+              <h1>Home Appliances</h1>
+            </div>
+
+            <div
+              className={styles.link}
+              onClick={() =>
+                router.push({
+                  pathname: "/list",
+                  query: { category: "Shoes", title: "Shoes" }
+                })
+              }
+            >
+              <h1>3</h1>
+              <h1>Shoes</h1>
+            </div>
+
+            <div
+              className={styles.link}
+              onClick={() =>
+                router.push({
+                  pathname: "/list",
+                  query: { category: "Sneakers", title: "Sneakers" }
+                })
+              }
+            >
+              <h1>4</h1>
+              <h1>Sneakers</h1>
+            </div>
+
+            <div
+              className={styles.link}
+              onClick={() =>
+                router.push({
                   pathname: "/list",
                   query: { category: "electronics", title: "Electronics" }
                 })
               }
             >
-              <h1>1</h1>
+              <h1>5</h1>
               <h1>Electronics</h1>
+            </div>
+
+            <div
+              className={styles.link}
+              onClick={() =>
+                router.push({
+                  pathname: "/list",
+                  query: { category: "Laptops", title: "Laptops" }
+                })
+              }
+            >
+              <h1>6</h1>
+              <h1>Laptops</h1>
+            </div>
+
+            <div
+              className={styles.link}
+              onClick={() =>
+                router.push({
+                  pathname: "/list",
+                  query: { category: "ApplePhones", title: "ApplePhones" }
+                })
+              }
+            >
+              <h1>7</h1>
+              <h1>Apple Phones</h1>
+            </div>
+
+            <div
+              className={styles.link}
+              onClick={() =>
+                router.push({
+                  pathname: "/list",
+                  query: { category: "AndroidPhone", title: "Android Phones" }
+                })
+              }
+            >
+              <h1>8</h1>
+              <h1>Android Phones</h1>
             </div>
           </div>
         </>
