@@ -7,6 +7,7 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 
 export default function Home({ user }) {
   const router = useRouter()
+
   return (
     <>
       <Head>
@@ -19,7 +20,10 @@ export default function Home({ user }) {
 
       <div className={styles.container}>
         <div className={styles.addContainer}>
-          <AddCircleIcon className={styles.icon} onClick={() => router.push("/my-product")}/>
+          {user && user?.displayName === "Kwabena" && (
+            <AddCircleIcon className={styles.icon} onClick={() => router.push("/my-product")} />
+
+          )}
         </div>
       </div>
     </>
