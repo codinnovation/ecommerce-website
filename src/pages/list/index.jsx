@@ -8,6 +8,8 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import CircularProgress from "@mui/material/CircularProgress";
+import DeleteIcon from "@mui/icons-material/Delete";
+import EditIcon from "@mui/icons-material/Edit";
 import Box from "@mui/material/Box";
 import { ref, get } from "firebase/database";
 import { db } from "../../../firebase.config";
@@ -18,6 +20,20 @@ function List() {
   const { category, title } = router.query;
   const [productData, setProductData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    async function fetchCurrentUser() {
+      try {
+        const response = await fetch("/api/user");
+        const data = await response.json();
+        setUser(data?.user);
+      } catch (error) {
+        console.error("Error fetching user data:", error);
+      }
+    }
+    fetchCurrentUser();
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -60,14 +76,6 @@ function List() {
     cart.push(product);
     localStorage.setItem("darlingtonFavs", JSON.stringify(cart));
     toast.success(`${product?.productName} added to cart`);
-  };
-
-  const handleDeleteItem = (index) => {
-    const updatedCart = [...cartItems];
-    updatedCart.splice(index, 1);
-    setCartItems(updatedCart);
-    localStorage.setItem("clamorousCart", JSON.stringify(updatedCart));
-    toast.success("Item removed from cart");
   };
 
   return (
@@ -132,9 +140,16 @@ function List() {
                     className={styles.icon}
                     onClick={() => addToCart(product)}
                   />
+
+                  {user && user?.displayName === "Kwabena" && (
+                    <>
+                      <DeleteIcon className={styles.icon} />
+                      <EditIcon className={styles.icon} />
+                    </>
+                  )}
+
                   <FavoriteBorderIcon
                     className={styles.icon}
-                    onClick={() => addFav(product)}
                   />
                 </div>
               </div>

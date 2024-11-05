@@ -101,12 +101,28 @@
 }
 
 .actions {
-  display: grid;
-  grid-template-columns: 1fr auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actions .icon:nth-child(4) {
+  color: red;
+  font-size: 2em;
+  background-color: #f1f1f1;
+  border-radius: 50%;
+  padding: 5px;
 }
 
 .actions .icon:nth-child(2) {
-  color: red;
+  color: indigo;
+  font-size: 2em;
+  background-color: #f1f1f1;
+  border-radius: 50%;
+  padding: 5px;
+}
+.actions .icon:nth-child(3) {
+  color: green;
   font-size: 2em;
   background-color: #f1f1f1;
   border-radius: 50%;

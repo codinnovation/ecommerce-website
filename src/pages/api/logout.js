@@ -1,0 +1,18 @@
+import { auth } from "../../../firebase.config";
+import withSession from "./session";
+
+export default withSession(async function handler(req, res) {
+	if (req.method === 'POST') {
+		try {
+			await req.session.destroy();
+			auth.signOut()
+
+			res.status(200).json({ message: "Logout successful" });
+		} catch (error) {
+			console.error("Logout failed:", error);
+			res.status(500).json({ error: "Failed to logout" });
+		}
+	} else {
+		res.status(405).end(); // Method Not Allowed
+	}
+});

@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "../styles/login.module.css";
 import Head from "next/head";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import CloseIcon from "@mui/icons-material/Close";
 import { useRouter } from "next/router";
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
@@ -18,7 +16,6 @@ function Email() {
     password: "",
     displayName: ""
   });
-
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -91,10 +88,6 @@ function Email() {
       </Head>
       <div className={styles.loginContainer}>
         <div className={styles.loginContent}>
-          <div className={styles.closeIcon}>
-            <ArrowBackIosIcon className={styles.iconArrow} />
-            <CloseIcon className={styles.icon} />
-          </div>
           <div className={styles.loginFormContent}>
             <div className={styles.loginHeader}>
               <h1>Create Account</h1>
@@ -114,10 +107,10 @@ function Email() {
                 </div>
 
                 <div className={styles.inputField}>
-                  <label>First Name</label>
+                  <label>Username</label>
                   <input
                     type="text"
-                    placeholder=""
+                    placeholder="example@cod001"
                     name="displayName"
                     value={userDetails.displayName}
                     onChange={handleInputChange}
