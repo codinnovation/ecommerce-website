@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../../../styles/home/navigation.module.css";
 import Link from "next/link";
 import SearchIcon from "@mui/icons-material/Search";
@@ -7,19 +7,42 @@ import { useRouter } from "next/router";
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Toaster, toast } from "react-hot-toast";
-import Photo from "../../../../public/cybertruck.png";
-import Photo1 from "../../../../public/sneaker.png";
-import Photo2 from "../../../../public/shirt.png";
 import Image from "next/image";
 
 function Navigation() {
   const router = useRouter();
   const [openMenu, setOpenMenu] = useState(false);
   const [buyModal, setBuyModal] = useState(false);
+  const [cartItems, setCartItems] = useState([]);
 
   const getActiveClass = (path) => {
     return router.pathname === path ? styles.activeLink : "";
   };
+
+  const loadCartItems = () => {
+    const storedCart =
+      JSON.parse(localStorage.getItem("darlingtonCarts")) || [];
+    setCartItems(storedCart);
+  };
+
+
+  useEffect(() => {
+    // Load cart items initially
+    loadCartItems();
+
+    // Listen to `storage` events to update cart when localStorage changes
+    const handleStorageChange = (event) => {
+      if (event.key === "darlingtonCarts") {
+        loadCartItems();
+      }
+    };
+
+    window.addEventListener("storage", handleStorageChange);
+
+    return () => {
+      window.removeEventListener("storage", handleStorageChange);
+    };
+  }, []);
 
   return (
     <>
@@ -35,10 +58,6 @@ function Navigation() {
           <div className={styles.linkContainer}>
             <Link href="/" className={getActiveClass("/")}>
               Home
-            </Link>
-
-            <Link href="/my-product" className={getActiveClass("/shop")}>
-              Add Product
             </Link>
 
             <Link href="/shop" className={getActiveClass("/shop")}>
@@ -67,113 +86,33 @@ function Navigation() {
 
               {/* Cart content under the cart icon */}
               <div className={styles.cartContent}>
-                <div className={styles.cartItem}>
-                  <div className={styles.cartItemContent}>
-                    <div className={styles.cartItemPhoto}>
-                      <Image src={Photo2} width={900} height={900} alt="" />
+                {cartItems.map((item, index) => (
+                  <div className={styles.cartItem} key={index}>
+                    <div className={styles.cartItemContent}>
+                      <div className={styles.cartItemPhoto}>
+                        <Image
+                          src={item?.productImage}
+                          width={900}
+                          height={900}
+                          alt=""
+                          unoptimized
+                        />
+                      </div>
+
+                      <div className={styles.cartItemName}>
+                        <h1>{item.productName}</h1>
+                        <p>Ghc{item.productPrice}</p>
+                      </div>
                     </div>
 
-                    <div className={styles.cartItemName}>
-                      <h1>This is Item Name</h1>
-                      <p>Ghc50.00</p>
+                    <div className={styles.cartItemButton}>
+                      <button onClick={() => setBuyModal(true)}>Buy</button>
+                      <button onClick={() => handleDeleteItem(index)}>
+                        Delete
+                      </button>
                     </div>
                   </div>
-
-                  <div className={styles.cartItemButton}>
-                    <button onClick={() => setBuyModal(true)}>Buy</button>
-                    <button>Delete</button>
-                  </div>
-                </div>
-
-                <div className={styles.cartItem}>
-                  <div className={styles.cartItemContent}>
-                    <div className={styles.cartItemPhoto}>
-                      <Image src={Photo2} width={900} height={900} alt="" />
-                    </div>
-
-                    <div className={styles.cartItemName}>
-                      <h1>This is Item Name</h1>
-                      <p>Ghc50.00</p>
-                    </div>
-                  </div>
-
-                  <div className={styles.cartItemButton}>
-                    <button onClick={() => setBuyModal(true)}>Buy</button>
-                    <button>Delete</button>
-                  </div>
-                </div>
-
-                <div className={styles.cartItem}>
-                  <div className={styles.cartItemContent}>
-                    <div className={styles.cartItemPhoto}>
-                      <Image src={Photo} width={900} height={900} alt="" />
-                    </div>
-
-                    <div className={styles.cartItemName}>
-                      <h1>This is Item Name</h1>
-                      <p>Ghc50.00</p>
-                    </div>
-                  </div>
-
-                  <div className={styles.cartItemButton}>
-                    <button onClick={() => setBuyModal(true)}>Buy</button>
-                    <button>Delete</button>
-                  </div>
-                </div>
-
-                <div className={styles.cartItem}>
-                  <div className={styles.cartItemContent}>
-                    <div className={styles.cartItemPhoto}>
-                      <Image src={Photo2} width={900} height={900} alt="" />
-                    </div>
-
-                    <div className={styles.cartItemName}>
-                      <h1>This is Item Name</h1>
-                      <p>Ghc50.00</p>
-                    </div>
-                  </div>
-
-                  <div className={styles.cartItemButton}>
-                    <button onClick={() => setBuyModal(true)}>Buy</button>
-                    <button>Delete</button>
-                  </div>
-                </div>
-
-                <div className={styles.cartItem}>
-                  <div className={styles.cartItemContent}>
-                    <div className={styles.cartItemPhoto}>
-                      <Image src={Photo1} width={900} height={900} alt="" />
-                    </div>
-
-                    <div className={styles.cartItemName}>
-                      <h1>This is Item Name</h1>
-                      <p>Ghc50.00</p>
-                    </div>
-                  </div>
-
-                  <div className={styles.cartItemButton}>
-                    <button onClick={() => setBuyModal(true)}>Buy</button>
-                    <button>Delete</button>
-                  </div>
-                </div>
-
-                <div className={styles.cartItem}>
-                  <div className={styles.cartItemContent}>
-                    <div className={styles.cartItemPhoto}>
-                      <Image src={Photo1} width={900} height={900} alt="" />
-                    </div>
-
-                    <div className={styles.cartItemName}>
-                      <h1>This is Item Name</h1>
-                      <p>Ghc50.00</p>
-                    </div>
-                  </div>
-
-                  <div className={styles.cartItemButton}>
-                    <button onClick={() => setBuyModal(true)}>Buy</button>
-                    <button>Delete</button>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
@@ -195,14 +134,13 @@ function Navigation() {
               className={styles.link}
               onClick={() =>
                 router.push({
-                  pathname: "/",
+                  pathname: "/"
                 })
               }
             >
               <h1>0</h1>
               <h1>Home</h1>
             </div>
-
 
             <div
               className={styles.link}
