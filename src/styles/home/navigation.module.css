@@ -35,7 +35,7 @@
   margin-left: 4%;
 }
 
-.linkContainer a:hover{
+.linkContainer a:hover {
   color: red;
 }
 
@@ -48,7 +48,6 @@
   justify-content: flex-end;
   align-items: center;
 }
-
 
 .actions .icon {
   font-size: 1.2em;
@@ -167,7 +166,6 @@
   font-weight: bold;
 }
 
-
 @media (max-width: 600px) {
   .navigationContainer {
     padding-top: 1px;
@@ -246,25 +244,32 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin-top: 14.5%;
+  }
+
+  .link:hover {
+    color: red;
   }
 
   .link h1:nth-child(1) {
-    color: #767676;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1em;
+    font-weight: 100;
+    border-radius: 50%;
+    color: #f1f1f1;
   }
 
   .link h1:nth-child(2) {
-    color: #767676;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1em;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-      sans-serif;
-    margin-left: 5px;
+    font-size: 0.9em;
+    font-weight: 100;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #f1f1f1;
   }
 
   .cartContent {
