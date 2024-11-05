@@ -128,8 +128,8 @@ function Navigation() {
               Home
             </Link>
 
-            <Link href="/shop" className={getActiveClass("/")}>
-              Electronics
+            <Link href="/admin-page/orders" className={getActiveClass("/")}>
+              Orders
             </Link>
             <Link href="/mobile" className={getActiveClass("/")}>
               Android
