@@ -1,0 +1,21 @@
+
+
+.addContainer {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+
+.addContainer .icon {
+  font-size: 48px;
+  color: #000;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .addContainer {
+    display: block;
+  }
+}

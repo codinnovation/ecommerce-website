@@ -105,9 +105,10 @@
   .addGrid .field input,
   .addGrid .field textarea {
     height: 50px;
+    width: 100%;
   }
 
   .addBtn {
-    margin-top: 25%;
+    margin-top: 35%;
   }
 }

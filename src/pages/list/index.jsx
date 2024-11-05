@@ -15,12 +15,9 @@ import { db } from "../../../firebase.config";
 function List() {
   const router = useRouter();
   const { category, title } = router.query;
-  const [openViewProduct, setOpenViewProduct] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState("");
   const [productData, setProductData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  console.log([productData]);
 
   useEffect(() => {
     const fetchData = async () => {
