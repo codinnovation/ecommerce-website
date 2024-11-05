@@ -11,13 +11,13 @@ import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 import { ref, get } from "firebase/database";
 import { db } from "../../../firebase.config";
+import { Toaster, toast } from "react-hot-toast";
 
 function List() {
   const router = useRouter();
   const { category, title } = router.query;
   const [productData, setProductData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-
 
   useEffect(() => {
     const fetchData = async () => {
@@ -47,6 +47,28 @@ function List() {
 
     fetchData();
   }, [category]);
+
+  const addToCart = (product) => {
+    const cart = JSON.parse(localStorage.getItem("darlingtonCarts")) || [];
+    cart.push(product);
+    localStorage.setItem("darlingtonCarts", JSON.stringify(cart));
+    toast.success(`${product?.productName} added to cart`);
+  };
+
+  const addFav = (product) => {
+    const cart = JSON.parse(localStorage.getItem("darlingtonFavs")) || [];
+    cart.push(product);
+    localStorage.setItem("darlingtonFavs", JSON.stringify(cart));
+    toast.success(`${product?.productName} added to cart`);
+  };
+
+  const handleDeleteItem = (index) => {
+    const updatedCart = [...cartItems];
+    updatedCart.splice(index, 1);
+    setCartItems(updatedCart);
+    localStorage.setItem("clamorousCart", JSON.stringify(updatedCart));
+    toast.success("Item removed from cart");
+  };
 
   return (
     <>
@@ -106,14 +128,21 @@ function List() {
                 </div>
 
                 <div className={styles.actions}>
-                  <AddShoppingCartIcon className={styles.icon} />
-                  <FavoriteBorderIcon className={styles.icon} />
+                  <AddShoppingCartIcon
+                    className={styles.icon}
+                    onClick={() => addToCart(product)}
+                  />
+                  <FavoriteBorderIcon
+                    className={styles.icon}
+                    onClick={() => addFav(product)}
+                  />
                 </div>
               </div>
             ))}
           </div>
         </div>
       </div>
+      <Toaster />
     </>
   );
 }
