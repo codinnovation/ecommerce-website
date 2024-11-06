@@ -27,6 +27,7 @@ function Navigation() {
   const [phone, setPhone] = useState("");
   const [last_name, setLast_Name] = useState("");
   const [first_name, setFirst_Name] = useState("");
+  const [location, setLocation] = useState("");
   const [selectedAmount, setSelectedAmount] = useState(0);
   const publicKey = process.env.NEXT_PUBLIC_PAY_STACK_API;
 
@@ -86,11 +87,9 @@ function Navigation() {
           firstName: first_name,
           lastName: last_name,
           email: email,
-          phone: phone
+          phone: phone,
+          location: location
         },
-        products: cartItems.filter(
-          (item) => item.productPrice === selectedAmount
-        ),
         totalAmount: amount / 100,
         paymentInfo: {
           transactionRef: response.reference,
@@ -354,6 +353,14 @@ function Navigation() {
                 <input
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
+                />
+              </div>
+
+              <div className={styles.field}>
+                <label>Location</label>
+                <input
+                  value={location}
+                  onChange={(e) => setLocation(e.target.value)}
                 />
               </div>
 
