@@ -1,7 +1,8 @@
 import React from "react";
+import withSession from "../api/session";
 
 function index() {
-  return <div>index</div>
+  return <div>index</div>;
 }
 
 export default index;
@@ -13,11 +14,18 @@ export const getServerSideProps = withSession(async function ({ req, res }) {
   if (
     (!user && user?.email !== "asomanirawlingsjunior5333@gmail.com") ||
     (!user && user?.email !== "kwabenasakyi450@gmail.com")
-  )
-    if (user) {
-      req.session.set("user", user);
-      await req.session.save();
-    }
+  ) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false
+      }
+    };
+  }
+  if (user) {
+    req.session.set("user", user);
+    await req.session.save();
+  }
 
   return {
     props: {
