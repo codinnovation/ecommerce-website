@@ -69,6 +69,7 @@ function List() {
     cart.push(product);
     localStorage.setItem("darlingtonCarts", JSON.stringify(cart));
     toast.success(`${product?.productName} added to cart`);
+    window.location.reload();
   };
 
   const addFav = (product) => {
@@ -132,7 +133,7 @@ function List() {
                 </div>
 
                 <div className={styles.productPrice}>
-                  <h1>{product?.productPrice}</h1>
+                  <h1>{`Ghc ${product?.productPrice}`}</h1>
                 </div>
 
                 <div className={styles.actions}>
