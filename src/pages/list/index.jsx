@@ -141,16 +141,17 @@ function List() {
                     onClick={() => addToCart(product)}
                   />
 
-                  {user && user?.displayName === "Kwabena" && (
-                    <>
-                      <DeleteIcon className={styles.icon} />
-                      <EditIcon className={styles.icon} />
-                    </>
-                  )}
+                  {(user &&
+                    user?.email === process.env.NEXT_PUBLIC_ADMIN_EMAIL) ||
+                    (user &&
+                      user?.email === process.env.NEXT_PUBLIC_ADMIN_EMAIL2 && (
+                        <>
+                          <DeleteIcon className={styles.icon} />
+                          <EditIcon className={styles.icon} />
+                        </>
+                      ))}
 
-                  <FavoriteBorderIcon
-                    className={styles.icon}
-                  />
+                  <FavoriteBorderIcon className={styles.icon} />
                 </div>
               </div>
             ))}
