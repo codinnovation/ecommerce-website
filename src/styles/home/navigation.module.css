@@ -176,7 +176,7 @@
 .buyContainer {
   width: 100%;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   background-color: #fff;
   z-index: 1000;
   top: 0;

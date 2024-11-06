@@ -18,7 +18,7 @@ const PaystackButton = dynamic(
   { ssr: false }
 );
 
-function Navigation() {
+function Navigation({ user }) {
   const router = useRouter();
   const [openMenu, setOpenMenu] = useState(false);
   const [buyModal, setBuyModal] = useState(false);
@@ -88,17 +88,15 @@ function Navigation() {
           lastName: last_name,
           email: email,
           phone: phone,
-          location: location
-        },
-        totalAmount: amount / 100,
-        paymentInfo: {
+          location: location,
+          totalAmount: amount / 100,
           transactionRef: response.reference,
           status: response.status,
           paymentMethod: "Paystack",
           amountPaid: amount / 100,
-          currency: "GHS"
-        },
-        orderDate: new Date().toISOString()
+          currency: "GHS",
+          orderDate: new Date().toISOString()
+        }
       };
       handleSaveOrderToDB(orderDetails);
 
@@ -127,9 +125,12 @@ function Navigation() {
               Home
             </Link>
 
-            <Link href="/admin-page/orders" className={getActiveClass("/")}>
-              Orders
-            </Link>
+            {(user && user?.email === process.env.NEXT_PUBLIC_ADMIN_EMAIL) ||
+              (user && user?.email === process.env.NEXT_PUBLIC_ADMIN_EMAIL2 && (
+                <Link href="/admin-page/orders" className={getActiveClass("/")}>
+                  Orders
+                </Link>
+              ))}
             <Link href="/mobile" className={getActiveClass("/")}>
               Android
             </Link>
