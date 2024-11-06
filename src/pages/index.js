@@ -18,7 +18,7 @@ export default function Home({ user }) {
       <HomePage user={user} />
 
       <div className={styles.container}>
-        {user && user?.displayName === "Kwabena" && (
+        {user && user?.email === process.env.NEXT_PUBLIC_ADMIN_EMAIL || user && user?.email === process.env.NEXT_PUBLIC_ADMIN_EMAIL2 && (
           <div className={styles.addContainer}>
             <AddCircleIcon className={styles.icon} onClick={() => router.push("/my-product")} />
           </div>

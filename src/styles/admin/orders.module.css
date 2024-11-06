@@ -1,0 +1,62 @@
+.orderContainer {
+  width: 100%;
+  background-color: #fff;
+}
+
+.orderContent {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 2%;
+}
+
+.orderContent .header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.orderContent .header h1 {
+  font-size: 1em;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 100;
+}
+
+.orderTable {
+  margin-top: 5%;
+}
+
+.orderTableHeader {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 5vh;
+}
+
+.orderTableHeader h1 {
+  text-transform: uppercase;
+  font-size: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.orderTableColumn {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 7vh;
+}
+
+.orderTableColumn:nth-child(even){
+	background-color: #f1f1f1;
+}
+
+.orderTableColumn h1 {
+  font-size: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 100;
+}

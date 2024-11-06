@@ -33,12 +33,31 @@ function HeroSection() {
                 <h1>Fashion</h1>
               </div>
 
-              <div className={styles.link}>
+              <div
+                className={styles.link}
+                onClick={() =>
+                  router.push({
+                    pathname: "/list",
+                    query: {
+                      category: "homeAppliances",
+                      title: "Home Appliances"
+                    }
+                  })
+                }
+              >
                 <h1>2</h1>
                 <h1>Home Appliances</h1>
               </div>
 
-              <div className={styles.link}>
+              <div
+                className={styles.link}
+                onClick={() =>
+                  router.push({
+                    pathname: "/list",
+                    query: { category: "shoes", title: "Shoes" }
+                  })
+                }
+              >
                 <h1>3</h1>
                 <h1>Shoes</h1>
               </div>
@@ -69,17 +88,41 @@ function HeroSection() {
                 <h1>Electronics</h1>
               </div>
 
-              <div className={styles.link}>
+              <div
+                className={styles.link}
+                onClick={() =>
+                  router.push({
+                    pathname: "/list",
+                    query: { category: "laptops", title: "Laptops" }
+                  })
+                }
+              >
                 <h1>6</h1>
                 <h1>Laptops</h1>
               </div>
 
-              <div className={styles.link}>
+              <div
+                className={styles.link}
+                onClick={() =>
+                  router.push({
+                    pathname: "/list",
+                    query: { category: "applePhones", title: "Apple Phones" }
+                  })
+                }
+              >
                 <h1>7</h1>
                 <h1>Apple Phones</h1>
               </div>
 
-              <div className={styles.link}>
+              <div
+                className={styles.link}
+                onClick={() =>
+                  router.push({
+                    pathname: "/list",
+                    query: { category: "androidPhones", title: "Android Phones" }
+                  })
+                }
+              >
                 <h1>8</h1>
                 <h1>Android Phones</h1>
               </div>
