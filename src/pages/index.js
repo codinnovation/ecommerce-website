@@ -6,6 +6,8 @@ import withSession from "./api/session";
 import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 
 export default function Home({ user }) {
+
+  console.log(user)
   const router = useRouter()
   return (
     <>
@@ -18,7 +20,7 @@ export default function Home({ user }) {
       <HomePage user={user} />
 
       <div className={styles.container}>
-        {user && user?.email === process.env.NEXT_PUBLIC_ADMIN_EMAIL || user && user?.email === process.env.NEXT_PUBLIC_ADMIN_EMAIL2 && (
+        {user && (user?.email === process.env.NEXT_PUBLIC_ADMIN_EMAIL || process.env.NEXT_PUBLIC_ADMIN_EMAIL2)&& (
           <div className={styles.addContainer}>
             <AdminPanelSettingsIcon className={styles.icon} onClick={() => router.push("/admin-page")} />
           </div>

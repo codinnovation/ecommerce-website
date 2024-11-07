@@ -23,7 +23,7 @@ export const getServerSideProps = withSession(async function ({ req, res }) {
 
   if (
     (!user && user?.email !== process.env.NEXT_PUBLIC_ADMIN_EMAIL) ||
-    (!user && user?.email !== process.env.NEXT_PUBLIC_ADMIN_EMAIL2)
+    process.env.NEXT_PUBLIC_ADMIN_EMAIL2
   ) {
     return {
       redirect: {
