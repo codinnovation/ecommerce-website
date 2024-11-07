@@ -23,7 +23,7 @@
 
 .addContainer {
   background-color: #f1f1f1f1;
-  height: 60vh;
+  height: 65vh;
   margin-top: 2%;
   padding: 10px;
   border-radius: 5px;
@@ -32,7 +32,7 @@
 .addGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 60%;
+  width: 85%;
   margin: 0 auto;
   margin-top: 2%;
   gap: 8%;
@@ -88,7 +88,7 @@
   }
 
   .myproductContent .header h1 {
-    font-size: 1.1em;
+    font-size: 0.9em;
   }
 
   .addContainer {
@@ -103,7 +103,8 @@
   }
 
   .addGrid .field input,
-  .addGrid .field textarea {
+  .addGrid .field textarea,
+  .addGrid .field select {
     height: 50px;
     width: 100%;
   }

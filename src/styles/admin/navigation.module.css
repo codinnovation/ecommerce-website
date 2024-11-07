@@ -1,0 +1,395 @@
+.navigationContainer {
+  width: 100%;
+  background-color: #fff;
+  padding-top: 5px;
+}
+
+.navigationContent {
+  width: 60%;
+  height: 60px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  border-top: 3px dotted #c7c7c7;
+  border-bottom: 3px dotted #c7c7c7;
+}
+
+.menuContainer {
+  display: none;
+}
+
+.linkContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+
+.linkContainer a {
+  color: #000;
+  font-family: sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  margin-left: 4%;
+}
+
+.linkContainer a:hover {
+  color: red;
+}
+
+.activeLink {
+  color: red;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.actions .icon {
+  font-size: 1.2em;
+}
+
+.cartContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 35px;
+}
+
+.cartContainer .icon {
+  font-size: 1.2em;
+}
+
+.cartContainer p {
+  color: red;
+  font-weight: 100;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-left: 4px;
+}
+
+.cartContent {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 400px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  height: 50vh;
+  display: none;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  border-radius: 10px;
+}
+
+.cartContainer:hover .cartContent {
+  display: block;
+}
+
+.cartItem {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.cartItemContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.cartItemPhoto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+}
+
+.cartItemPhoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cartItemName {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.cartItemName h1 {
+  font-size: 1em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #000;
+}
+
+.cartItemName p {
+  margin-top: 7px;
+  font-size: 1.3em;
+}
+
+.cartItemButton {
+  margin-top: 20px;
+}
+
+.cartItemButton button {
+  width: 90px;
+  height: 35px;
+  border-radius: 5px;
+}
+
+.cartItemButton button:nth-child(1) {
+  margin-right: 20px;
+  border: none;
+  background-color: green;
+  color: #fff;
+}
+
+.cartItemButton button:nth-child(2) {
+  border: none;
+  background-color: red;
+  color: #fff;
+}
+
+.cartItem:last-child {
+  border-bottom: none;
+}
+
+.cartTotal {
+  padding: 10px;
+  font-weight: bold;
+}
+
+.buyContainer {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: #fff;
+  z-index: 1000;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buyContent {
+  height: auto;
+  width: 30%;
+  padding: 10px;
+}
+
+.buyContent .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buyContent .header h1 {
+  font-size: 1.5em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #000;
+}
+
+.inputField {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 4%;
+}
+
+.inputField .field {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+}
+
+.inputField .field input {
+  height: 60px;
+  margin-top: 5px;
+  border: 1px solid #f1f1f1;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.inputField .field input:focus {
+  outline: none;
+}
+
+.actionButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.actionButton button {
+  border: none;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .navigationContainer {
+    padding-top: 1px;
+  }
+  .navigationContent {
+    width: 90%;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 5%;
+  }
+
+  .linkContainer {
+    display: none;
+  }
+
+  .menuContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .menuContainer .icon {
+    font-size: 1.9em;
+  }
+
+  .menuContainer h1 {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+  }
+
+  .actions .icon {
+    font-size: 1.5em;
+  }
+
+  .cartContainer {
+    margin-left: 20px;
+  }
+
+  .cartContainer .icon {
+    font-size: 1.5em;
+  }
+
+  .cartContainer p {
+    color: red;
+    margin-left: 2px;
+  }
+
+  .menu {
+    position: fixed;
+    height: 100vh;
+    width: 70%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #000;
+    box-shadow: 0px 0px 0px 100000px rgba(0, 0, 0, 0.6);
+    padding: 20px;
+  }
+
+  .closeIcon {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .closeIcon .icon {
+    color: #f1f1f1;
+    background-color: #282727;
+    font-size: 2em;
+    border-radius: 50%;
+    padding: 4px;
+  }
+
+  .link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 14%;
+  }
+
+  .link:hover {
+    color: red;
+  }
+
+  .link h1:nth-child(1) {
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    font-weight: 100;
+    border-radius: 50%;
+    color: #f1f1f1;
+  }
+
+  .link h1:nth-child(2) {
+    font-size: 0.9em;
+    font-weight: 100;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #f1f1f1;
+  }
+
+  .cartContent {
+    width: 300px;
+    height: 60vh;
+  }
+
+  .cartItemPhoto img {
+    width: 85%;
+  }
+
+  .cartItemName h1 {
+    font-size: 0.75em;
+  }
+
+  .cartItemName p {
+    font-size: 1em;
+  }
+
+  .cartItemButton {
+    margin-top: 25px;
+  }
+
+  .cartItemButton button {
+    width: 85px;
+    height: 35px;
+    border-radius: 5px;
+  }
+
+  .buyContent {
+    width: 90%;
+  }
+
+  .buyContent .header h1 {
+    font-size: 1em;
+  }
+
+  .inputField {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 0%;
+  }
+
+  .inputField .field input {
+    height: 50px;
+  }
+  
+}

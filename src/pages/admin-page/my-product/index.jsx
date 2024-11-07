@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import Layout from "../layout";
-import styles from "../../styles/admin/my-product.module.css";
+import styles from "../../../styles/admin/my-product.module.css";
 import { Toaster, toast } from "react-hot-toast";
 import { ref, push } from "firebase/database";
 import {
@@ -9,7 +8,7 @@ import {
   uploadBytesResumable,
   getDownloadURL
 } from "firebase/storage";
-import { db } from "../../../firebase.config";
+import { db } from "../../../../firebase.config";
 
 function MyProduct() {
   const [uploadProgress, setUploadProgress] = useState(0);
@@ -104,7 +103,6 @@ function MyProduct() {
 
   return (
     <>
-      <Layout />
       <Toaster />
       <div className={styles.myproductContainer}>
         <div className={styles.myproductContent}>
