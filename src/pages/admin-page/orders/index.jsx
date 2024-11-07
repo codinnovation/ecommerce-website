@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Layout from "@/pages/layout";
+import Layout from "@/pages/admin-page/layout";
 import styles from "../../../styles/admin/orders.module.css";
 import withSession from "@/pages/api/session";
 import CircularProgress from "@mui/material/CircularProgress";
