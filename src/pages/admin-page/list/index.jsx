@@ -9,7 +9,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import Box from "@mui/material/Box";
-import { ref, get, update } from "firebase/database";
+import { ref, get, update, remove } from "firebase/database";
 import { Toaster, toast } from "react-hot-toast";
 import { db } from "../../../../firebase.config";
 
@@ -94,13 +94,13 @@ function List() {
     if (confirm("Are you sure you want to delete this product?")) {
       try {
         const productRef = ref(db, `products/${category}/${productKey}`);
-        await productRef.remove();
-
+        await remove(productRef); // Use the imported remove function
+  
         // Update local product data to remove the deleted product
         setProductData((prevData) =>
           prevData.filter((product) => product.key !== productKey)
         );
-
+  
         toast.success("Product deleted successfully!");
       } catch (error) {
         console.error("Error deleting product:", error);
@@ -108,6 +108,7 @@ function List() {
       }
     }
   };
+  
 
   return (
     <>
