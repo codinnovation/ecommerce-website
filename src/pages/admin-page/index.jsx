@@ -21,10 +21,7 @@ export const getServerSideProps = withSession(async function ({ req, res }) {
   const user = req.session.get("user");
   const currentPath = req ? req.url : window.location.pathname;
 
-  if (
-    (!user && user?.email !== process.env.NEXT_PUBLIC_ADMIN_EMAIL) ||
-    process.env.NEXT_PUBLIC_ADMIN_EMAIL2
-  ) {
+  if (!user && user?.email !== process.env.NEXT_PUBLIC_ADMIN_EMAIL) {
     return {
       redirect: {
         destination: "/",
