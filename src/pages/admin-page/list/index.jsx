@@ -75,7 +75,8 @@ function List() {
       const productRef = ref(db, `products/${category}/${editProduct.key}`);
       await update(productRef, {
         productName: editProduct.productName,
-        productPrice: editProduct.productPrice
+        productPrice: editProduct.productPrice,
+        productDescription: editProduct.productDescription
       });
       setProductData((prevData) =>
         prevData.map((product) =>
@@ -95,12 +96,12 @@ function List() {
       try {
         const productRef = ref(db, `products/${category}/${productKey}`);
         await remove(productRef); // Use the imported remove function
-  
+
         // Update local product data to remove the deleted product
         setProductData((prevData) =>
           prevData.filter((product) => product.key !== productKey)
         );
-  
+
         toast.success("Product deleted successfully!");
       } catch (error) {
         console.error("Error deleting product:", error);
@@ -108,7 +109,6 @@ function List() {
       }
     }
   };
-  
 
   return (
     <>
