@@ -11,6 +11,7 @@ import Image from "next/image";
 import { ref, push } from "firebase/database";
 import { db } from "../../../../firebase.config";
 import dynamic from "next/dynamic";
+import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
 
 // Dynamically import the PaystackButton with no SSR
 const PaystackButton = dynamic(
@@ -125,12 +126,6 @@ function Navigation({ user }) {
               Home
             </Link>
 
-            {(user && user?.email === process.env.NEXT_PUBLIC_ADMIN_EMAIL) ||
-              (user && user?.email === process.env.NEXT_PUBLIC_ADMIN_EMAIL2 && (
-                <Link href="/admin-page/orders" className={getActiveClass("/")}>
-                  Orders
-                </Link>
-              ))}
             <Link href="/mobile" className={getActiveClass("/")}>
               Android
             </Link>

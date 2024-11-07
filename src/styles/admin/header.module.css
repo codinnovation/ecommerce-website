@@ -1,0 +1,97 @@
+.headerContainer {
+  height: 15vh;
+  width: 100%;
+  background-color: #fff;
+}
+
+.headerContent {
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+
+.storeName {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.storeName h1 {
+  font-size: 1.5em;
+  font-weight: 900;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: uppercase;
+}
+
+.headerInfomation {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.headerInfomation a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-left: 30px;
+}
+
+.headerInfomation .category {
+  margin-left: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerInfomation .category select {
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+
+@media (max-width: 600px) {
+  .headerContainer {
+    height: auto;
+  }
+
+  .headerContent {
+    width: 90%;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .storeName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 5%;
+  }
+
+  .storeName h1 {
+    font-size: 1em;
+    font-weight: 900;
+    margin-right: 4px;
+  }
+
+  .headerInfomation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .headerInfomation a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1em;
+    margin-left: 20px;
+  }
+
+  .headerInfomation .category {
+    margin-left: 20px;
+  }
+}

@@ -1,8 +1,18 @@
 import React from "react";
 import withSession from "../api/session";
+import Layout from "../../pages/admin-page/layout";
+import MyProduct from "./my-product";
 
-function index() {
-  return <div>index</div>;
+function index({ user }) {
+  console.log(user);
+  return (
+    <>
+      <Layout user={user} />
+      <div>
+        <MyProduct />
+      </div>
+    </>
+  );
 }
 
 export default index;
@@ -12,8 +22,8 @@ export const getServerSideProps = withSession(async function ({ req, res }) {
   const currentPath = req ? req.url : window.location.pathname;
 
   if (
-    (!user && user?.email !== "asomanirawlingsjunior5333@gmail.com") ||
-    (!user && user?.email !== "kwabenasakyi450@gmail.com")
+    (!user && user?.email !== process.env.NEXT_PUBLIC_ADMIN_EMAIL) ||
+    (!user && user?.email !== process.env.NEXT_PUBLIC_ADMIN_EMAIL2)
   ) {
     return {
       redirect: {
